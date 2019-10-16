@@ -1,5 +1,6 @@
 import { Component, Output, EventEmitter, OnInit, OnDestroy } from '@angular/core';
 import { ThemeService } from 'src/app/services/theme.service';
+import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-toggle-switch',
@@ -11,6 +12,9 @@ export class ToggleSwitchComponent implements OnInit, OnDestroy {
 
   darkModeActive: boolean;
   darkModeSubscription;
+
+  faMoon = faMoon;
+  faSun = faSun;
 
   constructor(public theme: ThemeService) { }
 
