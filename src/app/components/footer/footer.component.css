@@ -1,0 +1,10 @@
+.footer {
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer .copyright {
+  font-weight: 500;
+}
