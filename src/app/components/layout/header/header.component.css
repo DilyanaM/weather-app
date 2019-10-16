@@ -1,10 +1,15 @@
-header {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   min-height: 50px;
+  transition: all .7s ease;
 }
 
-.header-black {
-  background: black;
+.header-light {
+  background: var(--light);
+}
+
+.header-dark {
+  background: var(--indigo);
 }
