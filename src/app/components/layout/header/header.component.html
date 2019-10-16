@@ -1,4 +1,7 @@
-<header [ngClass]="{'header-black': darkModeActive}">
+<header
+  class="header"
+  [ngClass]="darkModeActive ? 'header-dark' : 'header-light'"
+>
   <div class="logo">LOGO</div>
   <div class="toggle-theme">
     <app-toggle-switch (changeTheme)="onChangeTheme($event)"></app-toggle-switch>
