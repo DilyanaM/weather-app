@@ -1,3 +1,17 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  flex-grow: 1;
+}
+
+header, main, footer {
+  flex-shrink: 0;
+}
+
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
@@ -23,16 +37,20 @@ p {
 
 .bg-dark {
   background-color: var(--dark) !important;
+  transition: all .7s ease;
 }
 
 .bg-light {
   background-color: var(--light) !important;
+  transition: all .7s ease;
 }
 
 .text-dark {
   color: var(--dark) !important;
+  transition: all .7s ease;
 }
 
 .text-light {
   color: var(--light) !important;
+  transition: all .7s ease;
 }

@@ -19,9 +19,8 @@ export class ToggleSwitchComponent implements OnInit, OnDestroy {
   constructor(public theme: ThemeService) { }
 
   ngOnInit() {
-    this.darkModeSubscription = this.theme.darkMode.subscribe((value) => {
-      this.darkModeActive = value;
-    });
+    this.darkModeSubscription =
+      this.theme.darkMode.subscribe(value => this.darkModeActive = value);
   }
 
   toggleTheme() {

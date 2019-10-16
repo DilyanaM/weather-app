@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/layout/header/header.component';
 import { ToggleSwitchComponent } from './components/common/toggle-switch/toggle-switch.component';
 import { ThemeService } from './services/theme.service';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    ToggleSwitchComponent
+    ToggleSwitchComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
