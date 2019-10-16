@@ -1,6 +1,6 @@
-<header>
+<header [ngClass]="{'header-black': darkModeActive}">
   <div class="logo">LOGO</div>
   <div class="toggle-theme">
-    <app-toggle-switch></app-toggle-switch>
+    <app-toggle-switch (changeTheme)="onChangeTheme($event)"></app-toggle-switch>
   </div>
 </header>

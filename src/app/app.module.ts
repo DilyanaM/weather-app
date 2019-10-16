@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/layout/header/header.component';
 import { ToggleSwitchComponent } from './components/common/toggle-switch/toggle-switch.component';
+import { ThemeService } from './services/theme.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { ToggleSwitchComponent } from './components/common/toggle-switch/toggle-
     NgbModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ThemeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

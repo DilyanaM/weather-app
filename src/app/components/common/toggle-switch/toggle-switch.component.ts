@@ -1,15 +1,32 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Output, EventEmitter, OnInit, OnDestroy } from '@angular/core';
+import { ThemeService } from 'src/app/services/theme.service';
 
 @Component({
   selector: 'app-toggle-switch',
   templateUrl: './toggle-switch.component.html',
   styleUrls: ['./toggle-switch.component.css']
 })
-export class ToggleSwitchComponent implements OnInit {
+export class ToggleSwitchComponent implements OnInit, OnDestroy {
+  @Output() changeTheme: EventEmitter<any> = new EventEmitter();
 
-  constructor() { }
+  darkModeActive: boolean;
+  darkModeSubscription;
+
+  constructor(public theme: ThemeService) { }
 
   ngOnInit() {
+    this.darkModeSubscription = this.theme.darkMode.subscribe((value) => {
+      this.darkModeActive = value;
+    });
+  }
+
+  toggleTheme() {
+    this.theme.darkMode.next(!this.darkModeActive);
+    this.changeTheme.emit(this.darkModeActive);
+  }
+
+  ngOnDestroy() {
+    this.darkModeSubscription.unsubscribe();
   }
 
 }
