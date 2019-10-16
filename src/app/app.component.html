@@ -1,6 +1,6 @@
 <div class="content">
   <app-header></app-header>
-  <main>
+  <main [ngClass]="darkModeActive ? 'bg-dark' : 'bg-light'">
     tralala
   </main>
   <app-footer></app-footer>
