@@ -11,7 +11,7 @@ import { WeatherService } from './services/weather.service';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/layout/header/header.component';
 import { ToggleSwitchComponent } from './components/common/toggle-switch/toggle-switch.component';
-import { FooterComponent } from './components/footer/footer.component';
+import { FooterComponent } from './components/layout/footer/footer.component';
 
 @NgModule({
   declarations: [
