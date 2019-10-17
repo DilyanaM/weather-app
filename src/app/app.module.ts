@@ -12,13 +12,15 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/layout/header/header.component';
 import { ToggleSwitchComponent } from './components/common/toggle-switch/toggle-switch.component';
 import { FooterComponent } from './components/layout/footer/footer.component';
+import { WeatherCardComponent } from './components/common/weather-card/weather-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     ToggleSwitchComponent,
-    FooterComponent
+    FooterComponent,
+    WeatherCardComponent
   ],
   imports: [
     BrowserModule,
