@@ -13,7 +13,6 @@ export class AppComponent implements OnInit {
   darkModeActive: boolean;
   darkModeSubscription;
 
-  // currentWeather;
   // forecast;
 
   constructor(public theme: ThemeService, public weather: WeatherService) {}
@@ -24,11 +23,6 @@ export class AppComponent implements OnInit {
 
     // this.getForecast('London');
   }
-
-  // getCurrentWeather(city) {
-  //   this.weather.getCurrentWeather(city)
-  //     .subscribe(data => this.currentWeather = data);
-  // }
 
   // getForecast(city) {
   //   this.weather.getForecast(city)
