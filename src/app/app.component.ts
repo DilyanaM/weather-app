@@ -13,8 +13,8 @@ export class AppComponent implements OnInit {
   darkModeActive: boolean;
   darkModeSubscription;
 
-  // currentWeatherSubscription;
-  // forecastSubscription;
+  // currentWeather;
+  // forecast;
 
   constructor(public theme: ThemeService, public weather: WeatherService) {}
 
@@ -22,19 +22,20 @@ export class AppComponent implements OnInit {
     this.darkModeSubscription =
       this.theme.darkMode.subscribe(value => this.darkModeActive = value);
 
-    // this.currentWeatherSubscription =
-    //   this.weather.getCurrentWeather('London').subscribe((data) => {
-    //     console.log('city data', data);
-    //   });
-    // this.forecastSubscription =
-    //   this.weather.getForecast('London').subscribe((data) => {
-    //     console.log('forecast', data);
-    //   });
+    // this.getForecast('London');
   }
+
+  // getCurrentWeather(city) {
+  //   this.weather.getCurrentWeather(city)
+  //     .subscribe(data => this.currentWeather = data);
+  // }
+
+  // getForecast(city) {
+  //   this.weather.getForecast(city)
+  //     .subscribe(data => this.forecast = data);
+  // }
 
   ngOnDestroy() {
     this.darkModeSubscription.unsubscribe();
-    // this.currentWeatherSubscription.unsubscribe();
-    // this.forecastSubscription.unsubscribe();
   }
 }
