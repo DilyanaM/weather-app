@@ -12,13 +12,17 @@ export class WeatherService {
 
   getForecast(city: string): Observable<any> {
     const data = this.http.get(
-      `${API_URL}/forecast?q=${city}&mode=json&APPID=${APP_ID}`);
+      `${API_URL}/forecast?q=${city}&units=metric&mode=json&APPID=${APP_ID}`);
     return data;
   }
 
   getCurrentWeather(city: string): Observable<any> {
     const data = this.http.get(
-      `${API_URL}/weather?q=${city}&APPID=${APP_ID}`);
+      `${API_URL}/weather?q=${city}&units=metric&APPID=${APP_ID}`);
     return data;
+  }
+
+  roundDegrees(temp) {
+    return Math.round(Number(temp));
   }
 }
