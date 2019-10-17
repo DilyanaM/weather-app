@@ -1,4 +1,4 @@
-<div class="weather-card">
+<div class="weather-card" [ngClass]="darkModeActive ? 'bg-dark' : 'bg-light'">
   <div *ngIf="currentWeather">
     <p>City: {{ currentWeather.name }}</p>
     <p>Temperature: {{ currentWeather.main.temp }}</p>
