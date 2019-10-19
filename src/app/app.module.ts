@@ -13,6 +13,7 @@ import { HeaderComponent } from './components/layout/header/header.component';
 import { ToggleSwitchComponent } from './components/common/toggle-switch/toggle-switch.component';
 import { FooterComponent } from './components/layout/footer/footer.component';
 import { WeatherCardComponent } from './components/common/weather-card/weather-card.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { WeatherCardComponent } from './components/common/weather-card/weather-c
     HeaderComponent,
     ToggleSwitchComponent,
     FooterComponent,
-    WeatherCardComponent
+    WeatherCardComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

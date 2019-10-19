@@ -1,7 +1,7 @@
 <div class="content">
   <app-header></app-header>
   <main [ngClass]="darkModeActive ? 'bg-dark' : 'bg-light'" class="main">
-    <app-weather-card></app-weather-card>
+    <router-outlet></router-outlet>
   </main>
   <app-footer></app-footer>
 </div>
