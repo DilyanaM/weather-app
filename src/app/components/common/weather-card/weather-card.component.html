@@ -12,7 +12,13 @@
     <p>Conditions: {{ currentWeather.weather[0].main }}</p>
     <p>Description: {{ currentWeather.weather[0].description }}</p>
     <p>Wind Speed: {{ currentWeather.wind.speed }}</p>
-    <p>Sunrise: {{ currentWeather.sys.sunrise }}</p>
-    <p>Sunset: {{ currentWeather.sys.sunset }}</p>
+    <p>
+      Sunrise: {{ currentWeather.sys.sunrise }}
+      (GMT {{ currentWeather.timezone }})
+    </p>
+    <p>
+      Sunset: {{ currentWeather.sys.sunset }}
+      (GMT {{ currentWeather.timezone }})
+    </p>
   </div>
 </div>

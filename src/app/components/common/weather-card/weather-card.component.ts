@@ -34,6 +34,7 @@ export class WeatherCardComponent implements OnInit {
     data.main.temp_max = this.weather.roundDegrees(data.main.temp_max);
     data.sys.sunrise = this.date.formatDate(data.sys.sunrise);
     data.sys.sunset = this.date.formatDate(data.sys.sunset);
+    data.timezone = this.date.timezoneOffset(data.timezone);
   }
 
 }
