@@ -9,6 +9,6 @@ export class DateService {
   constructor() { }
 
   formatDate(timestamp) {
-    return moment.unix(timestamp).format("dddd, MMMM Do YYYY, h:mm:ss (Z)");
+    return moment.unix(timestamp).format("dddd, MMMM Do YYYY, HH:mm:ss (Z)");
   }
 }
