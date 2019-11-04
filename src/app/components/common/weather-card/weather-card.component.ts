@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { WeatherService } from 'src/app/services/weather.service';
 import { DateService } from 'src/app/services/date.service';
 
@@ -9,16 +9,18 @@ import { DateService } from 'src/app/services/date.service';
 })
 export class WeatherCardComponent implements OnInit {
 
+  @Input('city') cityName: string;
+
   currentWeather;
 
   constructor(public weather: WeatherService, public date: DateService) { }
 
   ngOnInit() {
-    this.getCurrentWeather('London');
+    this.getCurrentWeather(this.cityName);
   }
 
-  getCurrentWeather(city: string) {
-    this.weather.getCurrentWeather(city)
+  getCurrentWeather(cityName: string) {
+    this.weather.getCurrentWeather(cityName)
       .subscribe(data => {
         this.currentWeather = data;
         this.transformData(this.currentWeather);
