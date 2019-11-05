@@ -7,11 +7,11 @@
       |
       <span>Max: {{ currentWeather.main.temp_max }} &#8451;</span>
     </p>
-    <p>Pressure: {{ currentWeather.main.pressure }}</p>
-    <p>Humidity: {{ currentWeather.main.humidity }}</p>
+    <p>Pressure: {{ currentWeather.main.pressure }} hPa</p>
+    <p>Humidity: {{ currentWeather.main.humidity }}%</p>
     <p>Conditions: {{ currentWeather.weather[0].main }}</p>
     <p>Description: {{ currentWeather.weather[0].description }}</p>
-    <p>Wind Speed: {{ currentWeather.wind.speed }}</p>
+    <p>Wind Speed: {{ currentWeather.wind.speed }} m/s</p>
     <!-- <p>
       Sunrise: {{ currentWeather.sys.sunrise }}
       (GMT {{ currentWeather.timezone }})
