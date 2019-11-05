@@ -1,6 +1,9 @@
 <div class="content">
   <app-header></app-header>
-  <main [ngClass]="darkModeActive ? 'bg-dark' : 'bg-light'" class="main">
+  <main
+    class="main"
+    [ngClass]="darkModeActive ? 'bg-gradient-dark' : 'bg-gradient-light'"
+  >
     <router-outlet></router-outlet>
   </main>
   <app-footer></app-footer>

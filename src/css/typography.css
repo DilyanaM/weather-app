@@ -37,20 +37,30 @@ p {
 
 .bg-dark {
   background-color: var(--dark) !important;
-  transition: all .7s ease;
+  transition: all .4s ease;
 }
 
 .bg-light {
   background-color: var(--light) !important;
-  transition: all .7s ease;
+  transition: all .4s ease;
+}
+
+.bg-gradient-light {
+  background: var(--gradient-light);
+  transition: all .4s ease;
+}
+
+.bg-gradient-dark {
+  background: var(--gradient-dark);
+  transition: all .4s ease;
 }
 
 .text-dark {
   color: var(--dark) !important;
-  transition: all .7s ease;
+  transition: all .4s ease;
 }
 
 .text-light {
   color: var(--light) !important;
-  transition: all .7s ease;
+  transition: all .4s ease;
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { WeatherService } from 'src/app/services/weather.service';
 import { DateService } from 'src/app/services/date.service';
+import { ThemeService } from 'src/app/services/theme.service';
 
 @Component({
   selector: 'app-weather-card',
@@ -12,11 +13,19 @@ export class WeatherCardComponent implements OnInit {
   @Input('city') cityName: string;
 
   currentWeather;
+  darkModeActive: boolean;
+  darkModeSubscription;
 
-  constructor(public weather: WeatherService, public date: DateService) { }
+  constructor(
+    public weather: WeatherService,
+    public date: DateService,
+    private theme: ThemeService
+  ) { }
 
   ngOnInit() {
     this.getCurrentWeather(this.cityName);
+    this.darkModeSubscription =
+      this.theme.darkMode.subscribe(value => this.darkModeActive = value);
   }
 
   getCurrentWeather(cityName: string) {

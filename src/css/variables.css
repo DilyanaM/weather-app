@@ -1,8 +1,6 @@
 :root {
-  --light: coral;
-  --dark: indigo;
-  --primary-light: coral;
-  --primary-dark: indigo;
-  --secondary-light: indigo;
-  --secondary-dark: coral;
+  --light: #66a6ff;
+  --dark: #06050A;
+  --gradient-light: linear-gradient(to bottom,  #7df9ff 0%, #66a6ff 100%);
+  --gradient-dark: linear-gradient(to bottom, #6610f2 0%, #06050A 100%);
 }
