@@ -6,23 +6,16 @@ import * as moment from 'moment';
 })
 export class DateService {
 
-  // digitsRegex = /^[0-9]{2}?$/g;
-
   formatDate(timestamp: number) {
     return moment.unix(timestamp).format("dddd, MMMM Do YYYY, HH:mm:ss");
   }
 
   timezoneOffset(timezone: number) {
-    // let offset;
-    // if (timezone >= 0) {
-    //   offset = timezone / 3600;
-    // } else {
-    //   offset = (timezone / 3600) * -1;
-    // }
-    if (timezone >= 0) {
-      return `+${timezone / 3600}`;
+    const offset = Math.abs(timezone / 3600);
+    if (offset < 10) {
+      return timezone >= 0 ? `+0${offset}:00` : `-0${offset}:00`;
     } else {
-      return `${timezone / 3600}`;
+      return timezone >= 0 ? `+${offset}:00` : `-${offset}:00`;
     }
   }
 

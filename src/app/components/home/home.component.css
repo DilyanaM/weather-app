@@ -1,3 +1,7 @@
 .weather-cards-container {
   display: flex;
 }
+
+.weather-card {
+  flex: 1;
+}

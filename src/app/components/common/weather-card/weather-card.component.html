@@ -1,24 +1,24 @@
 <div class="weather-card" [ngClass]="darkModeActive ? 'bg-dark' : 'bg-light'">
   <div *ngIf="currentWeather">
     <p>City: {{ currentWeather.name }}</p>
-    <p>Temperature: {{ currentWeather.main.temp }}</p>
+    <p>Temperature: {{ currentWeather.main.temp }} &#8451;</p>
     <p>
-      <span>Min: {{ currentWeather.main.temp_min }}</span>
+      <span>Min: {{ currentWeather.main.temp_min }} &#8451;</span>
       |
-      <span>Max: {{ currentWeather.main.temp_max }}</span>
+      <span>Max: {{ currentWeather.main.temp_max }} &#8451;</span>
     </p>
     <p>Pressure: {{ currentWeather.main.pressure }}</p>
     <p>Humidity: {{ currentWeather.main.humidity }}</p>
     <p>Conditions: {{ currentWeather.weather[0].main }}</p>
     <p>Description: {{ currentWeather.weather[0].description }}</p>
     <p>Wind Speed: {{ currentWeather.wind.speed }}</p>
-    <p>
+    <!-- <p>
       Sunrise: {{ currentWeather.sys.sunrise }}
       (GMT {{ currentWeather.timezone }})
     </p>
     <p>
       Sunset: {{ currentWeather.sys.sunset }}
       (GMT {{ currentWeather.timezone }})
-    </p>
+    </p> -->
   </div>
 </div>
