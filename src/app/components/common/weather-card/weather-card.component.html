@@ -8,29 +8,36 @@
     [ngClass]="darkModeActive ? 'text-light' : 'text-dark'"
   >
     <div class="current-weather-main">
-      <h2>{{ currentWeather.name }}</h2>
-      <div class="current-weather-conditions">
-        <span class="current-temperature">
-          {{ currentWeather.main.temp }} &#8451;
-        </span>
-        <app-weather-icon
-          [weatherCondition]="currentWeather.weather[0].main"
-          [darkModeActive]="darkModeActive"
-        >
-        </app-weather-icon>
-      </div>
-    </div>
-    <div class="current-weather-description text-right">
-      {{ currentWeather.weather[0].description }}
+      <h1 class="m-0">{{ currentWeather.name }}</h1>
+      <app-weather-icon
+        [weatherCondition]="currentWeather.weather[0].main"
+        [darkModeActive]="darkModeActive"
+      >
+      </app-weather-icon>
+      <span class="current-temperature">
+        {{ currentWeather.main.temp }} &#8451;
+      </span>
+      <span class="current-weather-description">
+        {{ currentWeather.weather[0].description }}
+      </span>
     </div>
     <div class="min-max-temp">
-      <span>Min: {{ currentWeather.main.temp_min }} &#8451;</span>
-      <span>Max: {{ currentWeather.main.temp_max }} &#8451;</span>
+      <div class="min-temp">
+        <span>Min</span>
+        <span>{{ currentWeather.main.temp_min }} &#8451;</span>
+        <fa-icon [icon]="faArrowDown"></fa-icon>
+      </div>
+      <div class="max-temp">
+        <span>Max</span>
+        <span>{{ currentWeather.main.temp_max }} &#8451;</span>
+        <fa-icon [icon]="faArrowUp"></fa-icon>
+      </div>
     </div>
-
-    <p>Pressure: {{ currentWeather.main.pressure }} hPa</p>
-    <p>Humidity: {{ currentWeather.main.humidity }}%</p>
-    <p>Wind Speed: {{ currentWeather.wind.speed }} m/s</p>
+    <div class="current-weather-details">
+      <p><span>Pressure: </span>{{ currentWeather.main.pressure }} hPa</p>
+      <p><span>Humidity: </span>{{ currentWeather.main.humidity }}%</p>
+      <p><span>Wind Speed: </span>{{ currentWeather.wind.speed }} m/s</p>
+    </div>
     <!-- <p>
       Sunrise: {{ currentWeather.sys.sunrise }}
       (GMT {{ currentWeather.timezone }})

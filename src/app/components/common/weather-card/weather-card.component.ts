@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { WeatherService } from 'src/app/services/weather.service';
 import { DateService } from 'src/app/services/date.service';
 import { ThemeService } from 'src/app/services/theme.service';
+import { faArrowUp, faArrowDown } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-weather-card',
@@ -15,6 +16,8 @@ export class WeatherCardComponent implements OnInit {
   currentWeather;
   darkModeActive: boolean;
   darkModeSubscription;
+  faArrowUp = faArrowUp;
+  faArrowDown = faArrowDown;
 
   constructor(
     public weather: WeatherService,

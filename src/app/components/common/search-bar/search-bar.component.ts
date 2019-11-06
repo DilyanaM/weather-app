@@ -18,7 +18,8 @@ export class SearchBarComponent implements OnInit {
     text$.pipe(
       debounceTime(200),
       distinctUntilChanged(),
-      map(capitalName => capitalName.length < 3 ? []
+      map(capitalName => capitalName.length < 3
+        ? []
         : this.capitals
           .filter(capital => capital.toLowerCase()
             .indexOf(capitalName.toLowerCase()) > -1)

@@ -3,24 +3,19 @@
   -moz-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.25);
   box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.25);
   border-radius: 7px;
-  padding: 10px 15px;
+  padding: 15px 20px;
   margin: 15px;
 }
 
 .current-weather-main {
   display: flex;
-  justify-content: space-between;
-}
-
-.current-weather-conditions {
-  display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 .current-temperature {
-  font-size: 18px;
+  font-size: 38px;
 }
 
 .current-weather-description {
@@ -30,6 +25,23 @@
 .min-max-temp {
   display: flex;
   justify-content: space-between;
-  padding: 20px 0;
+  margin: 45px 0;
   font-size: 16px;
+}
+
+.min-temp,
+.max-temp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.min-temp span:first-child,
+.max-temp span:first-child {
+  font-weight: 600;
+}
+
+.current-weather-details span {
+  font-weight: 600;
 }
