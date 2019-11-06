@@ -6,3 +6,30 @@
   padding: 10px 15px;
   margin: 15px;
 }
+
+.current-weather-main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.current-weather-conditions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.current-temperature {
+  font-size: 18px;
+}
+
+.current-weather-description {
+  font-size: 16px;
+}
+
+.min-max-temp {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  font-size: 16px;
+}

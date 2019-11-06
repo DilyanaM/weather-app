@@ -7,22 +7,29 @@
     class="weather-card-info"
     [ngClass]="darkModeActive ? 'text-light' : 'text-dark'"
   >
-    <app-weather-icon
-      [weatherCondition]="currentWeather.weather[0].main"
-      [darkModeActive]="darkModeActive"
-    >
-    </app-weather-icon>
-    <p>City: {{ currentWeather.name }}</p>
-    <p>Temperature: {{ currentWeather.main.temp }} &#8451;</p>
-    <p>
+    <div class="current-weather-main">
+      <h2>{{ currentWeather.name }}</h2>
+      <div class="current-weather-conditions">
+        <span class="current-temperature">
+          {{ currentWeather.main.temp }} &#8451;
+        </span>
+        <app-weather-icon
+          [weatherCondition]="currentWeather.weather[0].main"
+          [darkModeActive]="darkModeActive"
+        >
+        </app-weather-icon>
+      </div>
+    </div>
+    <div class="current-weather-description text-right">
+      {{ currentWeather.weather[0].description }}
+    </div>
+    <div class="min-max-temp">
       <span>Min: {{ currentWeather.main.temp_min }} &#8451;</span>
-      |
       <span>Max: {{ currentWeather.main.temp_max }} &#8451;</span>
-    </p>
+    </div>
+
     <p>Pressure: {{ currentWeather.main.pressure }} hPa</p>
     <p>Humidity: {{ currentWeather.main.humidity }}%</p>
-    <p>Conditions: {{ currentWeather.weather[0].main }}</p>
-    <p>Description: {{ currentWeather.weather[0].description }}</p>
     <p>Wind Speed: {{ currentWeather.wind.speed }} m/s</p>
     <!-- <p>
       Sunrise: {{ currentWeather.sys.sunrise }}

@@ -1,5 +1,5 @@
 <div [ngSwitch]="weatherCondition">
-  <div *ngSwitchCase="'Clear'">
+  <div *ngSwitchCase="'Clear'" class="weather-icon">
     <img
       *ngIf="!darkModeActive"
       src="../../../../assets/icons/clear-dark.svg"
@@ -11,7 +11,7 @@
       alt="Clear"
     />
   </div>
-  <div *ngSwitchCase="'Clouds'">
+  <div *ngSwitchCase="'Clouds'" class="weather-icon">
     <img
       *ngIf="!darkModeActive"
       src="../../../../assets/icons/clouds-dark.svg"
@@ -23,7 +23,7 @@
       alt="Clouds"
     />
   </div>
-  <div *ngSwitchCase="'Thunderstorm'">
+  <div *ngSwitchCase="'Thunderstorm'" class="weather-icon">
     <img
       *ngIf="!darkModeActive"
       src="../../../../assets/icons/thunderstorm-dark.svg"
@@ -35,7 +35,7 @@
       alt="Thunderstorm"
     />
   </div>
-  <div *ngSwitchCase="'Rain'">
+  <div *ngSwitchCase="'Rain'" class="weather-icon">
     <img
       *ngIf="!darkModeActive"
       src="../../../../assets/icons/rain-dark.svg"
@@ -47,7 +47,7 @@
       alt="Rain"
     />
   </div>
-  <div *ngSwitchCase="'Drizzle'">
+  <div *ngSwitchCase="'Drizzle'" class="weather-icon">
     <img
       *ngIf="!darkModeActive"
       src="../../../../assets/icons/rain-dark.svg"
@@ -59,7 +59,7 @@
       alt="Drizzle"
     />
   </div>
-  <div *ngSwitchCase="'Snow'">
+  <div *ngSwitchCase="'Snow'" class="weather-icon">
     <img
       *ngIf="!darkModeActive"
       src="../../../../assets/icons/snow-dark.svg"
@@ -71,7 +71,7 @@
       alt="Snow"
     />
   </div>
-  <div *ngSwitchCase="'Mist'">
+  <div *ngSwitchCase="'Mist'" class="weather-icon">
     <img
       *ngIf="!darkModeActive"
       src="../../../../assets/icons/mist-dark.svg"
