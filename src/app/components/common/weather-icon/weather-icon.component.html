@@ -1,0 +1,86 @@
+<div [ngSwitch]="weatherCondition">
+  <div *ngSwitchCase="'Clear'">
+    <img
+      *ngIf="!darkModeActive"
+      src="../../../../assets/icons/clear-dark.svg"
+      alt="Clear"
+    />
+    <img
+      *ngIf="darkModeActive"
+      src="../../../../assets/icons/clear-light.svg"
+      alt="Clear"
+    />
+  </div>
+  <div *ngSwitchCase="'Clouds'">
+    <img
+      *ngIf="!darkModeActive"
+      src="../../../../assets/icons/clouds-dark.svg"
+      alt="Clouds"
+    />
+    <img
+      *ngIf="darkModeActive"
+      src="../../../../assets/icons/clouds-light.svg"
+      alt="Clouds"
+    />
+  </div>
+  <div *ngSwitchCase="'Thunderstorm'">
+    <img
+      *ngIf="!darkModeActive"
+      src="../../../../assets/icons/thunderstorm-dark.svg"
+      alt="Thunderstorm"
+    />
+    <img
+      *ngIf="darkModeActive"
+      src="../../../../assets/icons/thunderstorm-light.svg"
+      alt="Thunderstorm"
+    />
+  </div>
+  <div *ngSwitchCase="'Rain'">
+    <img
+      *ngIf="!darkModeActive"
+      src="../../../../assets/icons/rain-dark.svg"
+      alt="Rain"
+    />
+    <img
+      *ngIf="darkModeActive"
+      src="../../../../assets/icons/rain-light.svg"
+      alt="Rain"
+    />
+  </div>
+  <div *ngSwitchCase="'Drizzle'">
+    <img
+      *ngIf="!darkModeActive"
+      src="../../../../assets/icons/rain-dark.svg"
+      alt="Drizzle"
+    />
+    <img
+      *ngIf="darkModeActive"
+      src="../../../../assets/icons/rain-light.svg"
+      alt="Drizzle"
+    />
+  </div>
+  <div *ngSwitchCase="'Snow'">
+    <img
+      *ngIf="!darkModeActive"
+      src="../../../../assets/icons/snow-dark.svg"
+      alt="Snow"
+    />
+    <img
+      *ngIf="darkModeActive"
+      src="../../../../assets/icons/snow-light.svg"
+      alt="Snow"
+    />
+  </div>
+  <div *ngSwitchCase="'Mist'">
+    <img
+      *ngIf="!darkModeActive"
+      src="../../../../assets/icons/mist-dark.svg"
+      alt="Mist"
+    />
+    <img
+      *ngIf="darkModeActive"
+      src="../../../../assets/icons/mist-light.svg"
+      alt="Mist"
+    />
+  </div>
+</div>

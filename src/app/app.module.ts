@@ -7,6 +7,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppRoutingModule } from './app-routing.module';
 import { ThemeService } from './services/theme.service';
 import { WeatherService } from './services/weather.service';
+import { DateService } from './services/date.service';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/layout/header/header.component';
@@ -14,6 +15,7 @@ import { ToggleSwitchComponent } from './components/common/toggle-switch/toggle-
 import { FooterComponent } from './components/layout/footer/footer.component';
 import { WeatherCardComponent } from './components/common/weather-card/weather-card.component';
 import { HomeComponent } from './components/home/home.component';
+import { WeatherIconComponent } from './components/common/weather-icon/weather-icon.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { HomeComponent } from './components/home/home.component';
     ToggleSwitchComponent,
     FooterComponent,
     WeatherCardComponent,
-    HomeComponent
+    HomeComponent,
+    WeatherIconComponent
   ],
   imports: [
     BrowserModule,
@@ -34,6 +37,7 @@ import { HomeComponent } from './components/home/home.component';
   providers: [
     ThemeService,
     WeatherService,
+    DateService
   ],
   bootstrap: [AppComponent]
 })

@@ -34,7 +34,6 @@ export class WeatherCardComponent implements OnInit {
         this.currentWeather = data;
         this.transformData(this.currentWeather);
       });
-
   }
 
   transformData(data) {
