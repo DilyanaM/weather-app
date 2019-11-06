@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { ThemeService } from './services/theme.service';
@@ -16,6 +17,7 @@ import { FooterComponent } from './components/layout/footer/footer.component';
 import { WeatherCardComponent } from './components/common/weather-card/weather-card.component';
 import { HomeComponent } from './components/home/home.component';
 import { WeatherIconComponent } from './components/common/weather-icon/weather-icon.component';
+import { SearchBarComponent } from './components/common/search-bar/search-bar.component';
 
 @NgModule({
   declarations: [
@@ -25,14 +27,16 @@ import { WeatherIconComponent } from './components/common/weather-icon/weather-i
     FooterComponent,
     WeatherCardComponent,
     HomeComponent,
-    WeatherIconComponent
+    WeatherIconComponent,
+    SearchBarComponent
   ],
   imports: [
     BrowserModule,
     NgbModule,
     HttpClientModule,
     FontAwesomeModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [
     ThemeService,
