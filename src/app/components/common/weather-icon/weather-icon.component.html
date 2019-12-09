@@ -83,4 +83,16 @@
       alt="Mist"
     />
   </div>
+  <div *ngSwitchCase="'Fog'" class="weather-icon">
+    <img
+      *ngIf="!darkModeActive"
+      src="../../../../assets/icons/mist-dark.svg"
+      alt="Fog"
+    />
+    <img
+      *ngIf="darkModeActive"
+      src="../../../../assets/icons/mist-light.svg"
+      alt="Fog"
+    />
+  </div>
 </div>
