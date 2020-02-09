@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ThemeService } from './services/theme.service';
 import { WeatherService } from './services/weather.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,7 @@ export class AppComponent implements OnInit {
 
   title: string = 'Weather App';
   darkModeActive: boolean;
-  darkModeSubscription;
+  darkModeSubscription: Subscription;
 
   // forecast;
 
