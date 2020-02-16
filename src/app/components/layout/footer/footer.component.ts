@@ -1,4 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { ThemeService } from '../../../services/theme.service';
 
 @Component({
@@ -11,7 +12,7 @@ export class FooterComponent implements OnInit, OnDestroy {
   currentDate: Date;
   currentYear: number;
   darkModeActive: boolean;
-  darkModeSubscription;
+  darkModeSubscription: Subscription;
 
   constructor(private theme: ThemeService) { }
 
