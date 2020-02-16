@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ToggleSwitchComponent } from './toggle-switch.component';
+import { ThemeService } from '../../../services/theme.service';
 
 describe('ToggleSwitchComponent', () => {
   let component: ToggleSwitchComponent;
@@ -8,7 +9,9 @@ describe('ToggleSwitchComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ToggleSwitchComponent ]
+      declarations: [ ToggleSwitchComponent ],
+      // imports: [ ThemeService ],
+      providers: [ ThemeService ]
     })
     .compileComponents();
   }));

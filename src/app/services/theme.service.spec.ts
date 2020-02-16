@@ -4,7 +4,7 @@ import { ThemeService } from './theme.service';
 
 describe('ThemeService', () => {
   beforeEach(() => TestBed.configureTestingModule({
-    imports: [ ThemeService ]
+    providers: [ ThemeService ]
   }));
 
   it('should be created', () => {

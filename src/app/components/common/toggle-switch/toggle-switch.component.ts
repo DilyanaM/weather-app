@@ -1,5 +1,5 @@
 import { Component, Output, EventEmitter, OnInit, OnDestroy } from '@angular/core';
-import { ThemeService } from 'src/app/services/theme.service';
+import { ThemeService } from '../../../services/theme.service';
 import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 
 @Component({

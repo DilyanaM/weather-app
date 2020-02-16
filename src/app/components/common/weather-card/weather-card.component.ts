@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { WeatherService } from 'src/app/services/weather.service';
-import { DateService } from 'src/app/services/date.service';
-import { ThemeService } from 'src/app/services/theme.service';
+import { WeatherService } from '../../../services/weather.service';
+import { DateService } from '../../../services/date.service';
+import { ThemeService } from '../../../services/theme.service';
 import { faArrowUp, faArrowDown } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
