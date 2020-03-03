@@ -13,8 +13,7 @@ describe('WeatherCardComponent', () => {
       declarations: [ WeatherCardComponent ],
       imports: [ HttpClientTestingModule ],
       providers: [ ThemeService ]
-    })
-    .compileComponents();
+    }).compileComponents();
   }));
 
   beforeEach(() => {

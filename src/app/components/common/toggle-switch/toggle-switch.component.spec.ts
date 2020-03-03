@@ -10,7 +10,6 @@ describe('ToggleSwitchComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ ToggleSwitchComponent ],
-      // imports: [ ThemeService ],
       providers: [ ThemeService ]
     })
     .compileComponents();

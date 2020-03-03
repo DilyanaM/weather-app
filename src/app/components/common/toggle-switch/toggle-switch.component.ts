@@ -1,6 +1,8 @@
 import { Component, Output, EventEmitter, OnInit, OnDestroy } from '@angular/core';
-import { ThemeService } from '../../../services/theme.service';
+import { Subscription } from 'rxjs';
 import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
+
+import { ThemeService } from '../../../services/theme.service';
 
 @Component({
   selector: 'app-toggle-switch',
@@ -11,7 +13,7 @@ export class ToggleSwitchComponent implements OnInit, OnDestroy {
   @Output() changeTheme: EventEmitter<any> = new EventEmitter();
 
   darkModeActive: boolean;
-  darkModeSubscription;
+  darkModeSubscription: Subscription;
 
   faMoon = faMoon;
   faSun = faSun;
@@ -29,7 +31,9 @@ export class ToggleSwitchComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.darkModeSubscription.unsubscribe();
+    if (this.darkModeSubscription) {
+      this.darkModeSubscription.unsubscribe();
+    }
   }
 
 }
