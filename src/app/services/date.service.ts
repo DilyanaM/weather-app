@@ -7,7 +7,6 @@ import * as moment from 'moment/moment';
 export class DateService {
 
   formatDate(timestamp: number) {
-    // return moment.unix(timestamp).format('dddd, MMMM Do YYYY, HH:mm:ss');
     return moment.unix(timestamp).utc().format('dddd, MMMM Do YYYY, HH:mm:ss');
   }
 
