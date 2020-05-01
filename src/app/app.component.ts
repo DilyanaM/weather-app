@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ThemeService } from './services/theme.service';
 import { WeatherService } from './services/weather.service';
 import { Subscription } from 'rxjs';
@@ -8,9 +8,9 @@ import { Subscription } from 'rxjs';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, OnDestroy {
 
-  title: string = 'Weather App';
+  title = 'Weather App';
   darkModeActive: boolean;
   darkModeSubscription: Subscription;
 

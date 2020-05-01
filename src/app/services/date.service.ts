@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import * as moment from 'moment';
+import * as moment from 'moment/moment';
 
 @Injectable({
   providedIn: 'root'
@@ -7,7 +7,8 @@ import * as moment from 'moment';
 export class DateService {
 
   formatDate(timestamp: number) {
-    return moment.unix(timestamp).format("dddd, MMMM Do YYYY, HH:mm:ss");
+    // return moment.unix(timestamp).format('dddd, MMMM Do YYYY, HH:mm:ss');
+    return moment.unix(timestamp).utc().format('dddd, MMMM Do YYYY, HH:mm:ss');
   }
 
   timezoneOffset(timezone: number) {

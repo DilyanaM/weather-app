@@ -12,12 +12,20 @@ import { DateService } from './services/date.service';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/layout/header/header.component';
-import { ToggleSwitchComponent } from './components/common/toggle-switch/toggle-switch.component';
+import {
+  ToggleSwitchComponent
+ } from './components/common/toggle-switch/toggle-switch.component';
 import { FooterComponent } from './components/layout/footer/footer.component';
-import { WeatherCardComponent } from './components/common/weather-card/weather-card.component';
+import {
+  WeatherCardComponent
+ } from './components/common/weather-card/weather-card.component';
 import { HomeComponent } from './components/home/home.component';
-import { WeatherIconComponent } from './components/common/weather-icon/weather-icon.component';
-import { SearchBarComponent } from './components/common/search-bar/search-bar.component';
+import {
+  WeatherIconComponent
+ } from './components/common/weather-icon/weather-icon.component';
+import {
+  SearchBarComponent
+ } from './components/common/search-bar/search-bar.component';
 
 @NgModule({
   declarations: [

@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { WeatherService } from '../../../services/weather.service';
 import { DateService } from '../../../services/date.service';
 import { ThemeService } from '../../../services/theme.service';
@@ -15,7 +16,7 @@ export class WeatherCardComponent implements OnInit {
 
   currentWeather;
   darkModeActive: boolean;
-  darkModeSubscription;
+  darkModeSubscription: Subscription;
   faArrowUp = faArrowUp;
   faArrowDown = faArrowDown;
 
