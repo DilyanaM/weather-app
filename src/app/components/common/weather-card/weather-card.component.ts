@@ -33,20 +33,29 @@ export class WeatherCardComponent implements OnInit {
   }
 
   getCurrentWeather(cityName: string) {
-    this.weather.getCurrentWeather(cityName)
-      .subscribe(data => {
-        this.currentWeather = data;
-        this.transformData(this.currentWeather);
-      });
+    this.weather
+      .getCurrentWeather(cityName)
+      .subscribe(data => this.currentWeather = this.transformData(data));
   }
 
   transformData(data) {
-    data.main.temp = this.weather.roundDegrees(data.main.temp);
-    data.main.temp_min = this.weather.roundDegrees(data.main.temp_min);
-    data.main.temp_max = this.weather.roundDegrees(data.main.temp_max);
-    data.sys.sunrise = this.date.formatDate(data.sys.sunrise);
-    data.sys.sunset = this.date.formatDate(data.sys.sunset);
-    data.timezone = this.date.timezoneOffset(data.timezone);
+    const transformedData = {
+      ...data,
+      main: {
+        ...data.main,
+        temp: this.weather.roundDegrees(data.main.temp),
+        temp_min: this.weather.roundDegrees(data.main.temp_min),
+        temp_max: this.weather.roundDegrees(data.main.temp_max)
+      },
+      sys: {
+        ...data.sys,
+        sunrise: this.date.formatDate(data.sys.sunrise + data.timezone),
+        sunset: this.date.formatDate(data.sys.sunset + data.timezone),
+      },
+      timezone: this.date.timezoneOffset(data.timezone)
+    }
+
+    return transformedData;
   }
 
 }

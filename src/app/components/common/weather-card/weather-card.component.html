@@ -37,14 +37,14 @@
       <p><span>Pressure: </span>{{ currentWeather.main.pressure }} hPa</p>
       <p><span>Humidity: </span>{{ currentWeather.main.humidity }}%</p>
       <p><span>Wind Speed: </span>{{ currentWeather.wind.speed }} m/s</p>
+      <p>
+        <span>Sunrise: </span>{{ currentWeather.sys.sunrise }}
+        (GMT {{ currentWeather.timezone }})
+      </p>
+      <p>
+        <span>Sunset: </span>{{ currentWeather.sys.sunset }}
+        (GMT {{ currentWeather.timezone }})
+      </p>
     </div>
-    <p>
-      Sunrise: {{ currentWeather.sys.sunrise }}
-      (GMT {{ currentWeather.timezone }})
-    </p>
-    <p>
-      Sunset: {{ currentWeather.sys.sunset }}
-      (GMT {{ currentWeather.timezone }})
-    </p>
   </div>
 </div>
