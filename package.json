@@ -26,7 +26,7 @@
     "@ng-bootstrap/ng-bootstrap": "^6.2.0",
     "bootstrap": "^4.3.1",
     "country-list-js": "^3.1.7",
-    "moment": "^2.25.1",
+    "moment": "^2.29.1",
     "rxjs": "~6.5.4",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
