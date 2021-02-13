@@ -12,7 +12,7 @@ export class SearchBarComponent implements OnInit {
 
   public capital: any;
 
-  capitals: Array<String> = country.capitals();
+  capitals: Array<string> = country.capitals();
 
   search = (text$: Observable<string>) =>
     text$.pipe(
@@ -24,7 +24,7 @@ export class SearchBarComponent implements OnInit {
           .filter(capital => capital.toLowerCase()
             .indexOf(capitalName.toLowerCase()) > -1)
             .slice(0, 10))
-    );
+    )
 
   constructor() { }
 
