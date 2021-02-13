@@ -1,6 +1,10 @@
 # WeatherApp
 
-## Development server
+## Setup & Development server
+
+In order to run the app you need to setup an environment file, containing:
+`API_URL` and `APP_ID` from [https://openweathermap.org/](https://openweathermap.org/).
+Add those in `.env.example` and rename the file to `.env`.
 
 Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
