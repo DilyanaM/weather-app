@@ -4,6 +4,7 @@ import { WeatherService } from '../../../services/weather.service';
 import { DateService } from '../../../services/date.service';
 import { ThemeService } from '../../../services/theme.service';
 import { faArrowUp, faArrowDown } from '@fortawesome/free-solid-svg-icons';
+import { WeatherResponse, CityWeatherData } from '../../../models';
 
 @Component({
   selector: 'app-weather-card',
@@ -12,9 +13,9 @@ import { faArrowUp, faArrowDown } from '@fortawesome/free-solid-svg-icons';
 })
 export class WeatherCardComponent implements OnInit {
 
-  @Input('city') cityName: string;
+  @Input() cityName: string;
 
-  currentWeather;
+  currentWeather: CityWeatherData;
   darkModeActive: boolean;
   darkModeSubscription: Subscription;
   faArrowUp = faArrowUp;
@@ -32,13 +33,13 @@ export class WeatherCardComponent implements OnInit {
       this.theme.darkMode.subscribe(value => this.darkModeActive = value);
   }
 
-  getCurrentWeather(cityName: string) {
+  getCurrentWeather(cityName: string): void {
     this.weather
       .getCurrentWeather(cityName)
       .subscribe(data => this.currentWeather = this.transformData(data));
   }
 
-  transformData(data) {
+  transformData(data: WeatherResponse): CityWeatherData {
     const transformedData = {
       ...data,
       main: {
@@ -53,7 +54,7 @@ export class WeatherCardComponent implements OnInit {
         sunset: this.date.formatDate(data.sys.sunset + data.timezone),
       },
       timezone: this.date.timezoneOffset(data.timezone)
-    }
+    };
 
     return transformedData;
   }

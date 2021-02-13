@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { API_URL, APP_ID } from '../utils/constants';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { WeatherResponse } from '../models';
 
 @Injectable({
   providedIn: 'root'
@@ -16,13 +17,13 @@ export class WeatherService {
     return data;
   }
 
-  getCurrentWeather(city: string): Observable<any> {
+  getCurrentWeather(city: string): Observable<WeatherResponse> {
     const data = this.http.get(
       `${API_URL}/weather?q=${city}&units=metric&APPID=${APP_ID}`);
-    return data;
+    return data as Observable<WeatherResponse>;
   }
 
-  roundDegrees(temp) {
-    return Math.round(Number(temp));
+  roundDegrees(temp: number): number {
+    return Math.round(temp);
   }
 }

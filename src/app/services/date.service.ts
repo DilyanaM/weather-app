@@ -6,11 +6,11 @@ import * as moment from 'moment/moment';
 })
 export class DateService {
 
-  formatDate(timestamp: number) {
+  formatDate(timestamp: number): string {
     return moment.unix(timestamp).utc().format('dddd, MMMM Do YYYY, HH:mm:ss');
   }
 
-  timezoneOffset(timezone: number) {
+  timezoneOffset(timezone: number): string {
     const offset = Math.abs(timezone / 3600);
     if (offset < 10) {
       return timezone >= 0 ? `+0${offset}:00` : `-0${offset}:00`;
