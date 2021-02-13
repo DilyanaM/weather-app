@@ -27,7 +27,7 @@
     "bootstrap": "^4.5.3",
     "country-list-js": "^3.1.7",
     "moment": "^2.29.1",
-    "rxjs": "~6.5.4",
+    "rxjs": "~6.6.3",
     "tslib": "^2.1.0",
     "zone.js": "~0.10.3"
   },
