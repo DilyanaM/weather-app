@@ -25,7 +25,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
     "@ng-bootstrap/ng-bootstrap": "^6.2.0",
-    "bootstrap": "^4.5.3",
+    "bootstrap": "^4.6.0",
     "country-list-js": "^3.1.7",
     "moment": "^2.29.1",
     "rxjs": "~6.6.3",
